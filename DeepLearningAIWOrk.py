@@ -1,9 +1,11 @@
 import openai
 import os
 
+api_key = os.getenv("OPENAI_API_KEY")
+print("OPENAI_API_KEY:", os.getenv("OPENAI_API_KEY"))
+if api_key is None:
+    raise ValueError("API key not found in environment variables")
 
-
-api_key = "REDACTED"
 openai.api_key = api_key
 client = openai
 

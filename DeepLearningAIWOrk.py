@@ -1,6 +1,8 @@
 import openai
 import os
 
+
+
 api_key = "REDACTED"
 openai.api_key = api_key
 client = openai
